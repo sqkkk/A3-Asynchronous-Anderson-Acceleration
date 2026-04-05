@@ -4,7 +4,7 @@
 
 Currently, we support: 
 
-+ 17 federated learning baselines, including 5 synchronous baselines and 12 asynchronous baselines.
++ 15 federated learning baselines, including 5 synchronous baselines, and 12 asynchronous baselines.
 + Comprehensive simulation of system heterogeneity in asynchronous FL, including:
   + Device heterogeneity
   + Communication heterogeneity
@@ -36,8 +36,6 @@ Currently, we support:
 + **DAAFL**, [Data Disparity and Temporal Unavailability Aware Asynchronous Federated Learning for Predictive Maintenance on Transportation Fleets](https://ojs.aaai.org/index.php/AAAI/article/view/29467), *AAAI 2024*
 + **FADAS**, [FADAS: Towards Federated Adaptive Asynchronous Optimization](https://icml.cc/virtual/2024/poster/33327), *ICML 2024*
 + **CA2FL**, [Tackling the Data Heterogeneity in Asynchronous Federated Learning with Cached Update Calibration](https://iclr.cc/virtual/2024/poster/19456), *ICLR 2024*
-+ **AsyncAA**, asynchronous Anderson acceleration over a stale-aware historical update pool
-+ **Het-AsyncAA**, heterogeneity-aware AsyncAA with proximal correction and optional control variates
 
 
 

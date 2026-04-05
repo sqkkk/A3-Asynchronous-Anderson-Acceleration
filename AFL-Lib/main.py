@@ -2,6 +2,8 @@ import importlib
 import sys
 import numpy as np
 import os
+import random
+import torch
 
 from alg.asyncbase import AsyncBaseServer
 from utils.options import args_parser
@@ -63,5 +65,10 @@ class FedSim:
 
 if __name__ == '__main__':
     args = args_parser()
+    random.seed(args.seed)
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(args.seed)
     fed = FedSim(args=args)
     fed.simulate()

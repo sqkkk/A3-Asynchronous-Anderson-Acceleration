@@ -18,13 +18,15 @@ class BaseClient():
         self.args = args
         self.dataset_train = read_client_data(args.dataset, self.id, is_train=True)
         self.dataset_test = read_client_data(args.dataset, self.id, is_train=False)
-        self.device = args.device
+        # Fall back to CPU when CUDA is unavailable so experiments can still run
+        # with integer device ids in CPU-only environments.
+        self.device = args.device if torch.cuda.is_available() else 'cpu'
         self.server = None
 
         self.lr = args.lr
         self.batch_size = args.bs
         self.epoch = args.epoch
-        self.model = load_model(args).to(args.device)
+        self.model = load_model(args).to(self.device)
         self.loss_func = nn.CrossEntropyLoss()
         self.optim = torch.optim.SGD(params=self.model.parameters(),
                                      lr=self.lr,

@@ -24,6 +24,7 @@ def args_parser():
     parser.add_argument('--epoch', type=int, help="Epoch num")
     parser.add_argument('--lr', type=float, help="Learning rate")
     parser.add_argument('--gamma', type=float, help="Exponential decay of learning rate")
+    parser.add_argument('--seed', type=int, default=1, help="Random seed for reproducible experiments")
 
     # ===== Async Setting =====
     parser.add_argument('--decay', type=float, default=0.3, help="Basic weight decay in asynchronous aggregation")
