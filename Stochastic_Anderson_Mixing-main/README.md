@@ -30,17 +30,4 @@ ResNet: [pytorch_resnet_cifar10](https://github.com/akamaster/pytorch_resnet_cif
 
 LSTM: [awd-lstm-lm](https://github.com/salesforce/awd-lstm-lm)
 
-## Additional
 
-If you find this repository useful for your research, please consider citing our work:
-
-```
-@inproceedings{WeiBL21SAM,
-  author    = {Fuchao Wei and Chenglong Bao and Yang Liu}, 
-  title     = {Stochastic Anderson Mixing for Nonconvex Stochastic Optimization},
-  booktitle = {Advances in Neural Information Processing Systems},
-  pages     = {22995--23008},
-  volume = {34},
-  year      = {2021}
-}
-```
