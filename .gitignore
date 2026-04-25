@@ -4,3 +4,35 @@ Thumbs.db
 .DS_Store
 
 AFL-Lib/exp/
+
+# Datasets and generated local partitions
+data/
+Stochastic_Anderson_Mixing-main/data/
+Stochastic_Anderson_Mixing-main/**/data/
+AFL-Lib/dataset/*_dir*/
+
+# Raw experiment artifacts that are too large/noisy for GitHub
+*.pkl
+*.partial*
+*.cmd.txt
+*_logs/
+*_watch/
+*logs*/
+
+# Tuning and exploratory sweeps are intentionally kept local
+Stochastic_Anderson_Mixing-main/mnist/experiments/tune_fadas_ca2fl_private*/
+Stochastic_Anderson_Mixing-main/mnist/experiments/*_sweep*/
+Stochastic_Anderson_Mixing-main/mnist/experiments/*_protocol_search*/
+Stochastic_Anderson_Mixing-main/mnist/experiments/fedac_*pilot*/
+Stochastic_Anderson_Mixing-main/mnist/experiments/fedac_*shortscreen*/
+Stochastic_Anderson_Mixing-main/mnist/experiments/fedac_*retune*/
+
+# Local tuning launchers / monitors are useful on this machine but not paper artifacts.
+Stochastic_Anderson_Mixing-main/mnist/*_sweep*
+Stochastic_Anderson_Mixing-main/mnist/*_protocol_search*
+Stochastic_Anderson_Mixing-main/mnist/*pilot*
+Stochastic_Anderson_Mixing-main/mnist/*_tune_*
+Stochastic_Anderson_Mixing-main/mnist/*retune*
+Stochastic_Anderson_Mixing-main/mnist/*shortscreen*
+Stochastic_Anderson_Mixing-main/mnist/*rescue*
+Stochastic_Anderson_Mixing-main/mnist/*refine*
